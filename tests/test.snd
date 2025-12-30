@@ -1,0 +1,3 @@
+var holamint = 100;
+var hpjr = "STR";
+stdio.logln(holamint, hpjr);

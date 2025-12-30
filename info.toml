@@ -1,0 +1,30 @@
+# ===============================
+# MySCEH - Project Information
+# ===============================
+
+[project]
+name        = "Sand"
+fullname    = "Sand language"
+paradigms   = ['Interpreted', 'Procedural', 'Non-OOP']
+version     = "1.0"
+status      = "experimental"
+language    = "Go 1.25.5"
+category    = "Programming language / DSL"
+compiled    = false
+
+[author]
+name     = "Kab Software"
+developer= "Benjamin S.F."
+role     = "Creator / Maintainer"
+
+[platform]
+os = ["Windows", "Linux"]
+go = "1.25.x"
+
+[paths]
+entrypoint = "./src/main.go"
+source = [
+'./src/lexer.go', './src/parser.go', './src/ast.go',
+'./src/evaluator.go'
+]
+lib = "./lib/"
