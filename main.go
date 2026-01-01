@@ -13,7 +13,7 @@ import (
 func main() {
 	// 1. Verificamos si pasaste un archivo (ej: ./sand.exe hola.snd)
 	if len(os.Args) < 2 {
-		fmt.Println("Uso: sand <archivo.snd>")
+		fmt.Println("Usage: sand <file>.sand")
 		return
 	}
 
@@ -22,7 +22,7 @@ func main() {
 	// 2. Leemos el contenido del archivo
 	input, err := ioutil.ReadFile(filename)
 	if err != nil {
-		fmt.Printf("Error al leer el archivo: %s\n", err)
+		fmt.Printf("Error reading file: %s\n", err)
 		return
 	}
 
@@ -33,7 +33,7 @@ func main() {
 
 	// 4. Chequeamos errores de sintaxis
 	if len(p.Errors()) != 0 {
-		fmt.Println("Errores de sintaxis en Sand:")
+		fmt.Println("Syntax Errors:")
 		for _, msg := range p.Errors() {
 			fmt.Printf("\t%s\n", msg)
 		}
@@ -47,3 +47,4 @@ func main() {
 
 	evaluator.Eval(program, env)
 }
+
